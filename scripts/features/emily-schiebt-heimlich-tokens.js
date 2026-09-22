@@ -1,4 +1,6 @@
 const EMILY_USER_ID = "ZoypzwFHSgFjsV4j";
+const EMILY_CAUGHT_IMAGE_URL =
+  "https://assets.forge-vtt.com/6409126bc31700d40e3ac139/Bullshit%20Collection/Emily%20verschiebt%20Tokens.png";
 
 let dialogOpen = false;
 
@@ -16,7 +18,17 @@ async function showCaughtDialog() {
       window: {
         title: "Emily schiebt heimlich Tokens"
       },
-      content: "<p>Emily schiebt schon wieder heimlich Tokens.</p>",
+      position: {
+        width: 720
+      },
+      content: `
+        <p>Emily schiebt schon wieder heimlich Tokens.</p>
+        <img
+          src="${EMILY_CAUGHT_IMAGE_URL}"
+          alt="Emily verschiebt Tokens"
+          style="display: block; width: 100%; height: auto; margin-top: 1rem;"
+        >
+      `,
       buttons: [
         {
           action: "apologize",
